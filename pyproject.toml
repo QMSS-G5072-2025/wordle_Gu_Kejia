@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wordle_kg3222"
-version = "0.1.1"
+version = "0.1.2"
 description = "This package is designed for playing Wordle Game!"
 authors = ["Kejia Gu"]
 license = "MIT"
