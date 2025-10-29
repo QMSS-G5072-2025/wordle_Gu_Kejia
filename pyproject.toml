@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wordle_kg3222"
-version = "0.1.0"
+version = "0.1.1"
 description = "This package is designed for playing Wordle Game!"
 authors = ["Kejia Gu"]
 license = "MIT"
@@ -19,5 +19,7 @@ dev = [
     "myst-nb (>=1.3.0,<2.0.0)",
     "sphinx-autoapi (>=3.6.1,<4.0.0)",
     "sphinx-rtd-theme (>=3.0.2,<4.0.0)",
-    "sphinx (>=8.2.3,<9.0.0)"
+    "sphinx (>=8.2.3,<9.0.0)",
+    "pytest (>=8.4.2,<9.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)"
 ]
