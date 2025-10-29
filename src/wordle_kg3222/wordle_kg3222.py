@@ -13,6 +13,19 @@ def validate_guess(guess, word_length=5):
     -------
     bool
         True if guess is valid, False otherwise.
+
+    Examples
+    --------
+    >>> validate_guess("crane")
+    True
+    >>> validate_guess("cat")
+    False
+    >>> validate_guess("13579")
+    False
+    >>> validate_guess("CRANE")
+    False
+    >>> validate_guess("")
+    False
     """
     if not isinstance(guess, str):
         return False
@@ -83,6 +96,25 @@ def is_valid_word(word, word_list):
     -------
     bool
         True if word is in the list, False otherwise.
+
+    Examples
+    --------
+    word_list = [
+    "crane", "apple", "hello", "world", "python", 
+    "house", "water", "light", "music", "dream",
+    "happy", "smile", "peace", "heart", "brain",
+    "table", "chair", "phone", "paper", "green"
+]
+    >>>is_valid_word("crane", word_list)
+    True
+    >>>is_valid_word("CrANe", word_list)
+    True
+    >>>is_valid_word("cream", word_list)
+    False
+    >>>is_valid_word("", word_list)
+    False
+    >>>is_valid_word("crane", [])
+    False
     """
     return word.lower() in [w.lower() for w in word_list]
 
@@ -106,3 +138,4 @@ def calculate_game_score(guesses_used, max_guesses=6):
     if guesses_used <= 0 or guesses_used > max_guesses:
         return 0
     return max_guesses - guesses_used + 1
+
